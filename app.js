@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     chat.innerHTML += "<p><strong>Tú:</strong> " + mensaje + "</p>";
     input.value = "";
 
-    const res = await fetch("https://TU_PROYECTO_GLITCH.glitch.me/chat", {
+    const res = await fetch("https://eddward.glitch.me/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ mensaje })
