@@ -15,12 +15,28 @@
   </style>
 </head>
 <body>
-  <h2>Dictado por voz + GPT</h2>
-  <div id="chat"></div>
-  <textarea id="userInput" placeholder="Di algo o escribe aquí..."></textarea>
-  <button onclick="enviarMensaje()">Enviar</button>
-  <button id="btnDictado">🎤 Mantén para dictar</button>
+    <div id="container">
+  <!-- aquí va el chat, textarea, botones, etc. -->
 
+  <h2>Conversación con GPT-4o</h2>
+  <div id="chat"></div>
+  <textarea id="userInput" placeholder="Escribe tu mensaje aquí..."></textarea>
+  <br>
+  <button onclick="enviarMensaje()">Enviar</button>
+  <button id="botonDictar">🎤 Mensaje de voz (mantén presionado)</button>
+  <label for="idioma">Idioma de dictado:</label>
+    <select id="idioma">
+    <option value="de-DE">Alemán 🇩🇪</option>
+    <option value="es-ES">Español 🇪🇸</option>
+    <option value="en-US">Inglés 🇺🇸</option>
+    <option value="fr-FR">Francés 🇫🇷</option>
+    <option value="it-IT">Italiano 🇮🇹</option>
+    </select>
+  <br>
+  <button id="btnPermisoMicrofono" onclick="solicitarPermisoMicrofono()" style="display: none;">
+  🎙️ Activar micrófono
+</button>
+  </div>
   <script src="app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
