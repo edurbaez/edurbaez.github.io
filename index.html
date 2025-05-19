@@ -260,7 +260,7 @@ async function enviarMensaje() {
     document.addEventListener("DOMContentLoaded", () => {
   const boton = document.getElementById("btnPermisoMicrofono");
 
-  // Intentamos acceder al micrófono
+  /*/ Intentamos acceder al micrófono
   navigator.mediaDevices.getUserMedia({ audio: true })
     .then((stream) => {
       // 🎉 Permiso concedido: ocultar botón (si estaba visible)
@@ -273,7 +273,7 @@ async function enviarMensaje() {
       console.warn("No hay permiso para el micrófono:", err.name);
       boton.style.display = "inline-block";
     });
-});
+});*/
 
 function solicitarPermisoMicrofono() {
   if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
