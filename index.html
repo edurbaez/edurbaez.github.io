@@ -256,11 +256,11 @@ async function enviarMensaje() {
       alert("Este navegador no soporta reconocimiento de voz (usa Chrome en Android).");
     }
 
-    // Solicitar permiso para el micrófono
+    /*/ Solicitar permiso para el micrófono
     document.addEventListener("DOMContentLoaded", () => {
   const boton = document.getElementById("btnPermisoMicrofono");
 
-  /*/ Intentamos acceder al micrófono
+  // Intentamos acceder al micrófono
   navigator.mediaDevices.getUserMedia({ audio: true })
     .then((stream) => {
       // 🎉 Permiso concedido: ocultar botón (si estaba visible)
